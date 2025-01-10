@@ -1,0 +1,14 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Me"
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome to my website!"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "This is about me page."
+  }
+}
