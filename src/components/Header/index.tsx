@@ -1,38 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import useTheme from '@/hooks/useTheme'
+import { ThemeSwitch } from '@/components/ThemeSwitch'
+import { LanguageSelect } from '@/components/LanguageSelect'
+import { NavButton } from '../NavButton/NavButton'
 
-const Header: React.FC = () => {
-  const { theme, toggleTheme } = useTheme()
-  const { i18n, t } = useTranslation()
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
-    localStorage.setItem('language', lng)
-  }
+export const Header: React.FC = () => {
+  const { t } = useTranslation()
 
   return (
-    <header>
-      <nav className="flex justify-between items-center">
-        <div>
-          <Link to="/" className="mr-4">
-            {t('header.home')}
-          </Link>
-          <Link to="/about">{t('header.about')}</Link>
+    <header className="flex justify-between items-center">
+      <NavButton title="<ŁT />" path="/" />
+      <div className="flex items-center">
+        <nav>
+          <NavButton title={t('home.title')} path="/" />
+          <NavButton title={t('about.title')} path="/about" />
+          <NavButton title={t('contact.title')} path="/contact" />
+        </nav>
+        <div className="flex items-center">
+          <ThemeSwitch />
+          <LanguageSelect />
         </div>
-        <div>
-          <button onClick={toggleTheme} className="mr-4">
-            {theme === 'light' ? 'dark' : 'light'} mode
-          </button>
-          <button onClick={() => changeLanguage('en')} className="mr-2">
-            EN
-          </button>
-          <button onClick={() => changeLanguage('pl')}>PL</button>
-        </div>
-      </nav>
+      </div>
     </header>
   )
 }
-
-export default Header

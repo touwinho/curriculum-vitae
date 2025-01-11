@@ -1,8 +1,4 @@
 {
-  "header": {
-    "home": "Strona główna",
-    "about": "O mnie"
-  },
   "home": {
     "title": "Strona główna",
     "welcome": "Witam na mojej stronie!"
@@ -10,5 +6,16 @@
   "about": {
     "title": "O mnie",
     "description": "To jest strona o mnie."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Skontaktuj się ze mną!"
+  },
+  "notfound": {
+    "title": "Strona nie znaleziona",
+    "description": "Strona, której szukasz, nie istnieje."
+  },
+  "footer": {
+    "text": "Wszelkie prawa zastrzeżone"
   }
 }

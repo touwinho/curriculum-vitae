@@ -1,8 +1,4 @@
 {
-  "header": {
-    "home": "Home",
-    "about": "About Me"
-  },
   "home": {
     "title": "Home",
     "welcome": "Welcome to my website!"
@@ -10,5 +6,16 @@
   "about": {
     "title": "About Me",
     "description": "This is about me page."
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Contact me!"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist."
+  },
+  "footer": {
+    "text": "All rights reserved"
   }
 }
