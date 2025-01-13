@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export const About: React.FC = () => {
+const About: FC = () => {
   const { t } = useTranslation()
 
   return (
@@ -11,3 +11,5 @@ export const About: React.FC = () => {
     </div>
   )
 }
+
+export default About

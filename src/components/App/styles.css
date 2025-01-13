@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .light {
-  @apply bg-white text-black;
+  @apply bg-light-background text-light-text;
 }
 
 .dark {
-  @apply bg-gray-900 text-white;
+  @apply bg-dark-background text-dark-text;
 }
