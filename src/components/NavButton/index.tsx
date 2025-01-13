@@ -1,14 +1,17 @@
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
-interface NavButtonProps {
+interface Props {
   title: string
   path: string
 }
 
-export const NavButton: React.FC<NavButtonProps> = ({ path, title }) => {
+const NavButton: FC<Props> = ({ path, title }) => {
   return (
     <Link to={path} className="ml-6">
       {title}
     </Link>
   )
 }
+
+export default NavButton

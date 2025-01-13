@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
 import { useTheme } from '@/context/ThemeContext'
+
 import EnFlag from '@/assets/locales/en-flag.svg'
 import PolandFlag from '@/assets/locales/pl-flag.svg'
 
-export const LanguageSelect: React.FC = () => {
+const LanguageSelect: FC = () => {
   const { i18n } = useTranslation()
   const { theme } = useTheme()
   const currentLanguage = i18n.language
@@ -125,3 +127,5 @@ export const LanguageSelect: React.FC = () => {
     </div>
   )
 }
+
+export default LanguageSelect

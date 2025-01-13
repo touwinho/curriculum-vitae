@@ -1,15 +1,18 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Home } from '@/pages/Home'
-import { About } from '@/pages/About'
-import { Header } from '@/components/Header'
-import { PageWrapper } from '../PageWrapper'
-import { Contact } from '@/pages/Contact'
-import { NotFound } from '@/pages/NotFound'
-import './styles.css'
-import { Footer } from '../Footer'
+import { FC } from 'react'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
-export const App: React.FC = () => {
+import About from '@/pages/About'
+import Contact from '@/pages/Contact'
+import Home from '@/pages/Home'
+import NotFound from '@/pages/NotFound'
+
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import PageWrapper from '@/components/PageWrapper'
+
+import './styles.css'
+
+const App: FC = () => {
   return (
     <Router>
       <PageWrapper>
@@ -27,3 +30,5 @@ export const App: React.FC = () => {
     </Router>
   )
 }
+
+export default App

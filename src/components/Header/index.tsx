@@ -1,10 +1,11 @@
-import React from 'react'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ThemeSwitch } from '@/components/ThemeSwitch'
-import { LanguageSelect } from '@/components/LanguageSelect'
-import { NavButton } from '../NavButton/NavButton'
 
-export const Header: React.FC = () => {
+import LanguageSelect from '@/components/LanguageSelect'
+import NavButton from '@/components/NavButton'
+import ThemeSwitch from '@/components/ThemeSwitch'
+
+const Header: FC = () => {
   const { t } = useTranslation()
 
   return (
@@ -24,3 +25,5 @@ export const Header: React.FC = () => {
     </header>
   )
 }
+
+export default Header

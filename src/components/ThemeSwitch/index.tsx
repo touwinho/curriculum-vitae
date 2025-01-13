@@ -1,9 +1,11 @@
-import React from 'react'
-import { useTheme } from '@/context/ThemeContext'
-import lightIcon from '@/assets/themes/light-icon.svg'
-import darkIcon from '@/assets/themes/dark-icon.svg'
+import { FC } from 'react'
 
-export const ThemeSwitch: React.FC = () => {
+import { useTheme } from '@/context/ThemeContext'
+
+import darkIcon from '@/assets/themes/dark-icon.svg'
+import lightIcon from '@/assets/themes/light-icon.svg'
+
+const ThemeSwitch: FC = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
@@ -39,3 +41,5 @@ export const ThemeSwitch: React.FC = () => {
     </label>
   )
 }
+
+export default ThemeSwitch

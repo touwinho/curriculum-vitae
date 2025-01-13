@@ -1,7 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export const Contact: React.FC = () => {
+const Contact: FC = () => {
   const { t } = useTranslation()
 
   return (
@@ -11,3 +11,5 @@ export const Contact: React.FC = () => {
     </div>
   )
 }
+
+export default Contact

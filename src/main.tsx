@@ -1,9 +1,11 @@
 import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from './components/App'
-import { ThemeProvider } from './context/ThemeContext'
-import './i18n'
-import i18n from './i18n'
+
+import App from '@/components/App'
+
+import ThemeProvider from '@/context/ThemeContext'
+
+import i18n from '@/i18n'
 
 const Root = () => {
   useEffect(() => {

@@ -1,9 +1,10 @@
-import React, {
+import {
   createContext,
-  useContext,
-  useState,
-  useEffect,
+  FC,
   ReactNode,
+  useContext,
+  useEffect,
+  useState,
 } from 'react'
 
 interface ThemeContextProps {
@@ -13,9 +14,7 @@ interface ThemeContextProps {
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined)
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme')
     return savedTheme ? savedTheme : 'light'
@@ -46,3 +45,5 @@ export const useTheme = () => {
   }
   return context
 }
+
+export default ThemeProvider
