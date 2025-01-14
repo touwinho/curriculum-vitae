@@ -7,6 +7,7 @@ export default {
       colors: {
         light: {
           background: '#ffffff',
+          section: '#ebeced',
           text: '#000000',
           border: '#d1d5db',
           hover: '#f3f4f6',
@@ -14,6 +15,7 @@ export default {
         },
         dark: {
           background: '#1a202c',
+          section: '#2d3748',
           text: '#ffffff',
           border: '#4a5568',
           hover: '#2d3748',

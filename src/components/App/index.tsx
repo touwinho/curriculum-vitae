@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import PageWrapper from '@/components/PageWrapper'
 
-import './styles.css'
+import '@/styles.css'
 
 const App: FC = () => {
   return (

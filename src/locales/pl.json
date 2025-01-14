@@ -1,13 +1,17 @@
 {
   "home": {
-    "title": "Strona główna",
-    "welcome": "Witam na mojej stronie!"
+    "nav": "Strona główna",
+    "t1": "Cześć, jestem",
+    "p11": "Frontend Developer (React) z solidnym doświadczeniem w QA Automation (Playwright). Łączę kreatywność i dbałość o szczegóły, tworząc nowoczesne, niezawodne aplikacje o najwyższej jakości.",
+    "t2": "Dla kogo realizowałem projekty?"
   },
   "about": {
+    "nav": "O mnie",
     "title": "O mnie",
     "description": "To jest strona o mnie."
   },
   "contact": {
+    "nav": "Kontakt",
     "title": "Kontakt",
     "description": "Skontaktuj się ze mną!"
   },
