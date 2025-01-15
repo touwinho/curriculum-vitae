@@ -8,7 +8,7 @@ export default {
         light: {
           background: '#ffffff',
           section: '#ebeced',
-          text: '#000000',
+          text: '#363636',
           border: '#d1d5db',
           hover: '#f3f4f6',
           shadow: '#e5e7eb',
