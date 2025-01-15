@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 
 import { useTheme } from '@/context/ThemeContext'
 
-import EnFlag from '@/assets/locales/en-flag.svg'
-import PolandFlag from '@/assets/locales/pl-flag.svg'
+import EnFlag from '@/assets/images/locales/en-flag.svg'
+import PolandFlag from '@/assets/images/locales/pl-flag.svg'
 
 const LanguageSelect: FC = () => {
   const { i18n } = useTranslation()
@@ -48,7 +48,7 @@ const LanguageSelect: FC = () => {
       <div>
         <button
           type="button"
-          className={`inline-flex items-center justify-center w-20 rounded-md border shadow-sm px-4 py-2 text-sm focus:outline-none transition-colors duration-300 ${
+          className={`inline-flex items-center justify-center w-20 rounded-md border shadow-sm px-4 py-2 text-l focus:outline-none transition-colors duration-300 ${
             theme === 'dark'
               ? 'bg-dark-background text-dark-text border-dark-border hover:bg-dark-hover'
               : 'bg-light-background text-light-text border-light-border hover:bg-light-hover'
@@ -59,13 +59,13 @@ const LanguageSelect: FC = () => {
             <img
               src={PolandFlag}
               alt="Poland Flag"
-              className="w-6 h-6 mr-2 rounded-full border-[1px] border-zinc-400 my-auto"
+              className="w-5 h-5 mr-2 rounded-full border-[1px] border-zinc-400 my-auto"
             />
           ) : (
             <img
               src={EnFlag}
               alt="En/US Flag"
-              className="w-6 h-6 mr-2 rounded-full border-[1px] border-zinc-400 my-auto"
+              className="w-5 h-5 mr-2 rounded-full border-[1px] border-zinc-400 my-auto"
             />
           )}
           {currentLanguage.toUpperCase()}
@@ -89,7 +89,7 @@ const LanguageSelect: FC = () => {
             {currentLanguage === 'en' ? (
               <button
                 onClick={() => changeLanguage('pl')}
-                className={`flex px-4 py-2 text-sm w-20 text-center items-center transition-colors ${
+                className={`flex px-4 py-2 text-l w-20 text-center items-center transition-colors ${
                   theme === 'dark'
                     ? 'hover:bg-dark-hover'
                     : 'hover:bg-light-hover'
@@ -99,14 +99,14 @@ const LanguageSelect: FC = () => {
                 <img
                   src={PolandFlag}
                   alt="Poland Flag"
-                  className="w-6 h-6 mr-2 my-auto rounded-full border-[1px] border-zinc-400 inline"
+                  className="w-5 h-5 mr-2 my-auto rounded-full border-[1px] border-zinc-400 inline"
                 />
                 PL
               </button>
             ) : (
               <button
                 onClick={() => changeLanguage('en')}
-                className={`flex align-middle px-4 py-2 text-sm w-full text-center transition-colors ${
+                className={`flex align-middle px-4 py-2 text-l w-full text-center transition-colors ${
                   theme === 'dark'
                     ? 'hover:bg-dark-hover'
                     : 'hover:bg-light-hover'
@@ -116,7 +116,7 @@ const LanguageSelect: FC = () => {
                 <img
                   src={EnFlag}
                   alt="En/US Flag"
-                  className="w-6 h-6 mr-2 my-auto rounded-full border-[1px] border-zinc-400 inline"
+                  className="w-5 h-5 mr-2 my-auto rounded-full border-[1px] border-zinc-400 inline"
                 />
                 EN
               </button>
