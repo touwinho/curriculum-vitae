@@ -48,7 +48,7 @@ const LanguageSelect: FC = () => {
       <div>
         <button
           type="button"
-          className={`inline-flex items-center justify-center w-20 rounded-md border shadow-sm px-4 py-2 text-l focus:outline-none transition-colors duration-300 ${
+          className={`inline-flex items-center justify-center w-16 rounded-full border shadow-sm px-2 py-1 text-l focus:outline-none transition-colors duration-300 ${
             theme === 'dark'
               ? 'bg-dark-background text-dark-text border-dark-border hover:bg-dark-hover'
               : 'bg-light-background text-light-text border-light-border hover:bg-light-hover'
@@ -74,14 +74,14 @@ const LanguageSelect: FC = () => {
 
       {isOpen && (
         <div
-          className={`origin-top-right absolute right-0 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 transition-colors duration-300 ${
+          className={`origin-top-right absolute right-0 mt-2 rounded-full shadow-lg ring-1 ring-black ring-opacity-5 transition-colors duration-300 ${
             theme === 'dark'
               ? 'bg-dark-background text-dark-text'
               : 'bg-light-background text-light-text'
           }`}
         >
           <div
-            className="py-1"
+            className="w-16"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
@@ -89,7 +89,7 @@ const LanguageSelect: FC = () => {
             {currentLanguage === 'en' ? (
               <button
                 onClick={() => changeLanguage('pl')}
-                className={`flex px-4 py-2 text-l w-20 text-center items-center transition-colors ${
+                className={`flex px-2 py-1 text-l w-16 text-center rounded-full items-center transition-colors ${
                   theme === 'dark'
                     ? 'hover:bg-dark-hover'
                     : 'hover:bg-light-hover'
@@ -106,7 +106,7 @@ const LanguageSelect: FC = () => {
             ) : (
               <button
                 onClick={() => changeLanguage('en')}
-                className={`flex align-middle px-4 py-2 text-l w-full text-center transition-colors ${
+                className={`flex align-middle px-2 py-1 w-full text-l text-center rounded-full transition-colors ${
                   theme === 'dark'
                     ? 'hover:bg-dark-hover'
                     : 'hover:bg-light-hover'
