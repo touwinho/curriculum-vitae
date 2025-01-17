@@ -11,6 +11,13 @@ const About: FC = () => {
       <Section>
         <h1>{t('about.title')}</h1>
         <p>{t('about.description')}</p>
+        <a
+          href="/cv-tolwinski-lukasz.pdf"
+          download
+          className="mt-4 inline-block px-6 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+        >
+          {t('about.downloadResume')}
+        </a>
       </Section>
     </SectionWrapper>
   )

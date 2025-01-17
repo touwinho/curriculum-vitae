@@ -12,6 +12,7 @@ export default {
           border: '#d1d5db',
           hover: '#f3f4f6',
           shadow: '#e5e7eb',
+          button: '#c5c5c5',
         },
         dark: {
           background: '#1a202c',
@@ -20,6 +21,7 @@ export default {
           border: '#4a5568',
           hover: '#2d3748',
           shadow: '#2d3748',
+          button: '#2d3748',
         },
       },
     },
