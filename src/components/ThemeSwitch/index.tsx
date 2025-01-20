@@ -8,7 +8,7 @@ const ThemeSwitch: FC = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <label className="relative inline-flex items-center cursor-pointer ml-2">
+    <label className="relative inline-flex items-center cursor-pointer ml-2 select-none">
       <input
         type="checkbox"
         checked={theme === 'dark'}
@@ -31,7 +31,7 @@ const ThemeSwitch: FC = () => {
             <img
               src={theme === 'dark' ? darkIcon : lightIcon}
               alt={theme === 'dark' ? 'Dark Mode' : 'Light Mode'}
-              className="w-4 h-4 select-none"
+              className="w-4 h-4"
               style={{
                 filter: theme === 'dark' ? 'invert(100%)' : 'none',
                 transition: 'none',
