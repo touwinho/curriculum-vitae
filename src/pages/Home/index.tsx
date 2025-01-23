@@ -1,56 +1,66 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
+import clsx from 'clsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+//@ts-ignore
+import 'swiper/css'
 import Section from '@/components/Section'
 import SectionWrapper from '@/components/SectionWrapper'
-
 import { logos } from '@/assets/images/logos'
 import homePageImage from '@/assets/images/photos/homePage.png'
 
-import { useTheme } from '@/context/ThemeContext'
-
-//@ts-ignore
-import 'swiper/css'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
-
 const Home: FC = () => {
   const { t } = useTranslation()
-  const { theme } = useTheme()
 
   return (
     <SectionWrapper>
-      <Section
-        className={`flex flex-row justify-between min-h-80 mt-32 rounded-3xl relative ${theme === 'dark' ? 'bg-dark-section' : 'bg-light-section'}`}
-      >
-        <div className="flex flex-col w-[60%]">
-          <h1 className="text-4xl leading-8 mb-4 absolute top-8 left-8">
-            {t('home.t1')}&nbsp;Łukasz&nbsp;👋
-          </h1>
-          <p className="max-w-64 text-lg my-auto">{t('home.p11')}</p>
+      <Section className="flex md:flex-row flex-col relative justify-between min-h-80">
+        <div className={clsx('flex flex-col w-full', 'md:w-[60%]')}>
+          <h1 className="text-3xl mb-4">{t('home.t1')}&nbsp;Łukasz&nbsp;👋</h1>
+          <p className={clsx('text-lg', 'md:max-w-64')}>{t('home.p11')}</p>
         </div>
         <img
           src={homePageImage}
           alt="Łukasz Tołwiński"
-          className="w-64 min-w-44 overflow-auto translate-y-8 self-end absolute right-5"
+          className={clsx(
+            'w-48 translate-y-4 self-center select-none',
+            'md:absolute md:w-64 md:translate-y-0 md:bottom-0 md:right-5 md:select-none',
+          )}
         />
       </Section>
-      <Section
-        className={`rounded-3xl mt-24 ${theme === 'dark' ? 'bg-dark-section' : 'bg-light-section'}`}
-      >
-        <h1 className="text-4xl text-center mb-6">{t('home.t2')}</h1>
+      <Section>
+        <h1 className={clsx('text-3xl text-center mb-2', 'md:mb-4')}>
+          {t('home.t2')}
+        </h1>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={60}
-          slidesPerView={3}
           loop={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            370: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            500: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            660: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
         >
           {logos.map(({ name, alt, link }, index) => (
-            <SwiperSlide key={index} className="self-center">
+            <SwiperSlide key={index} className="self-center select-none">
               <a href={link} target="_blank" rel="noreferrer">
                 <img src={name} alt={alt} />
               </a>

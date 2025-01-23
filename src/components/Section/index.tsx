@@ -1,4 +1,6 @@
 import { FC, ReactNode } from 'react'
+import clsx from 'clsx'
+import { useTheme } from '@/context/ThemeContext'
 
 interface Props {
   children: ReactNode
@@ -6,7 +8,20 @@ interface Props {
 }
 
 const Section: FC<Props> = ({ children, className }) => {
-  return <div className={`my-12 p-8 w-full ${className}`}>{children}</div>
+  const { theme } = useTheme()
+
+  return (
+    <section
+      className={clsx(
+        'px-6 py-4 w-full rounded-3xl',
+        'md:p-8',
+        theme === 'dark' ? 'bg-dark-section' : 'bg-light-section',
+        className,
+      )}
+    >
+      {children}
+    </section>
+  )
 }
 
 export default Section

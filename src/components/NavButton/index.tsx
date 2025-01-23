@@ -9,7 +9,7 @@ interface Props {
 
 const NavButton: FC<Props> = ({ path, title, onClick }) => {
   return (
-    <Link to={path} className="ml-6">
+    <Link to={path} className="md:ml-6">
       <button onClick={onClick}>{title}</button>
     </Link>
   )

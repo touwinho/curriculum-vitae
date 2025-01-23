@@ -1,8 +1,9 @@
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
-const Logo = () => {
+const Logo: FC = () => {
   return (
-    <Link to="/" className="text-3xl font-bold">
+    <Link to="/" className="text-4xl select-none">
       {'<ŁT />'}
     </Link>
   )
