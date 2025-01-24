@@ -8,7 +8,9 @@
   "about": {
     "nav": "About Me",
     "title": "About Me",
-    "description": "This is about me page."
+    "description": "This is about me page.",
+    "c1": "Years of experience",
+    "c2": "Commercial projects"
   },
   "contact": {
     "nav": "Contact",

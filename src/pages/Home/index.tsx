@@ -30,7 +30,7 @@ const Home: FC = () => {
         />
       </Section>
       <Section>
-        <h1 className={clsx('text-3xl text-center mb-2', 'md:mb-4')}>
+        <h1 className={clsx('text-3xl text-center mb-2', 'md:mb-6')}>
           {t('home.t2')}
         </h1>
         <Swiper
@@ -59,8 +59,8 @@ const Home: FC = () => {
             disableOnInteraction: false,
           }}
         >
-          {logos.map(({ name, alt, link }, index) => (
-            <SwiperSlide key={index} className="self-center select-none">
+          {logos.map(({ name, alt, link }) => (
+            <SwiperSlide key={name} className="self-center select-none">
               <a href={link} target="_blank" rel="noreferrer">
                 <img src={name} alt={alt} />
               </a>

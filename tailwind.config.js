@@ -13,6 +13,7 @@ export default {
           hover: '#f3f4f6',
           shadow: '#e5e7eb',
           button: '#c5c5c5',
+          counter: '#f9fafb',
         },
         dark: {
           background: '#1a202c',
@@ -22,6 +23,7 @@ export default {
           hover: '#2d3748',
           shadow: '#2d3748',
           button: '#2d3748',
+          counter: '#404c61',
         },
       },
     },

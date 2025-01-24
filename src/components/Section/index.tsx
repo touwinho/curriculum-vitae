@@ -13,7 +13,7 @@ const Section: FC<Props> = ({ children, className }) => {
   return (
     <section
       className={clsx(
-        'px-6 py-4 w-full rounded-3xl',
+        'p-4 w-full rounded-3xl',
         'md:p-8',
         theme === 'dark' ? 'bg-dark-section' : 'bg-light-section',
         className,
