@@ -3,12 +3,18 @@
     "nav": "Strona główna",
     "t1": "Cześć, jestem",
     "p11": "Frontend Developer (React) z doświadczeniem QA Automation (Playwright). Łączę kreatywność i dbałość o szczegóły, tworząc nowoczesne, niezawodne aplikacje o najwyższej jakości.",
-    "t2": "Dla kogo realizowałem projekty?"
+    "t2": "Z kim współpracowałem?"
   },
   "about": {
     "nav": "O mnie",
     "title": "O mnie",
-    "description": "To jest strona o mnie."
+    "description": "To jest strona o mnie.",
+    "c11": "Lata doświadczenia",
+    "c12": "Komercyjne projekty",
+    "c13": "Prowadzone wykłady techniczne",
+    "t2": "Technologie",
+    "t3": "CV",
+    "b31": "Pobierz CV"
   },
   "contact": {
     "nav": "Kontakt",

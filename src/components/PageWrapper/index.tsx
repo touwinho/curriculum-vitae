@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { FC, ReactNode } from 'react'
 
 interface Props {
@@ -5,7 +6,9 @@ interface Props {
 }
 
 const PageWrapper: FC<Props> = ({ children }) => {
-  return <div className="max-w-5xl mt-6 mx-auto">{children}</div>
+  return (
+    <div className={clsx('max-w-5xl mt-3 mx-auto', 'md:mt-6')}>{children}</div>
+  )
 }
 
 export default PageWrapper
