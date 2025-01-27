@@ -1,7 +1,7 @@
-import antropioLogo from '@/assets/images/logos/antropio.svg'
-import auctaneLogo from '@/assets/images/logos/auctane.svg'
-import codestorybroLogo from '@/assets/images/logos/codestorybro.svg'
-import trustmateLogo from '@/assets/images/logos/trustmate.svg'
+import antropioLogo from '@/assets/images/companies/antropio.svg'
+import auctaneLogo from '@/assets/images/companies/auctane.svg'
+import codestorybroLogo from '@/assets/images/companies/codestorybro.svg'
+import trustmateLogo from '@/assets/images/companies/trustmate.svg'
 
 export const logos = [
   {

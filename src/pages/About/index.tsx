@@ -3,6 +3,12 @@ import { useTranslation } from 'react-i18next'
 import Section from '@/components/Section'
 import SectionWrapper from '@/components/SectionWrapper'
 import Counter from '@/components/Counter'
+import Button from '@/components/Button'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+//@ts-ignore
+import 'swiper/css'
+import { technologies } from '@/assets/images/technologies'
 
 const About: FC = () => {
   const { t } = useTranslation()
@@ -20,30 +26,63 @@ const About: FC = () => {
       <Section>
         <div className="flex flex-col md:flex-row gap-9 justify-center">
           <Counter
-            title={t('about.c1')}
+            title={t('about.c11')}
             targetCount={diffYears}
             duration={250 * diffYears}
           />
           <Counter
-            title={t('about.c2')}
+            title={t('about.c12')}
             targetCount={projectsBreakpoint}
             duration={120 * projectsBreakpoint}
             formatCount={(count) =>
               count >= projectsBreakpoint ? '10+' : count.toString()
             }
           />
+          <Counter title={t('about.c13')} targetCount={1} duration={250 * 5} />
         </div>
       </Section>
-      <Section>
-        <h1>{t('about.title')}</h1>
-        <p>{t('about.description')}</p>
-        <a
-          href="/cv-tolwinski-lukasz.pdf"
-          download
-          className="mt-4 inline-block px-6 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+      <Section title={t('about.t2')}>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          loop={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            370: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            500: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            660: {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
         >
-          {t('about.downloadResume')}
-        </a>
+          {technologies.map(({ name, alt, link }) => (
+            <SwiperSlide key={name} className="select-none">
+              <a href={link} target="_blank">
+                <img className="h-24" src={name} alt={alt} />
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Section>
+      <Section title={t('about.t3')} className="flex flex-col items-center">
+        <Button>
+          <a className="text-2xl" href="/cv-tolwinski-lukasz.pdf" download>
+            {t('about.b31')}
+          </a>
+        </Button>
       </Section>
     </SectionWrapper>
   )

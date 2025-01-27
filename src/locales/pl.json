@@ -9,8 +9,12 @@
     "nav": "O mnie",
     "title": "O mnie",
     "description": "To jest strona o mnie.",
-    "c1": "Lata doświadczenia",
-    "c2": "Komercyjne projekty"
+    "c11": "Lata doświadczenia",
+    "c12": "Komercyjne projekty",
+    "c13": "Prowadzone wykłady techniczne",
+    "t2": "Technologie",
+    "t3": "CV",
+    "b31": "Pobierz CV"
   },
   "contact": {
     "nav": "Kontakt",

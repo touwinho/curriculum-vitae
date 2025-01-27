@@ -38,7 +38,8 @@ const Counter: FC<Props> = ({
   return (
     <div
       className={clsx(
-        'flex flex-col items-center p-4 rounded-3xl',
+        'flex flex-col text-center justify-around p-4 rounded-3xl',
+        'md:w-1/3',
         theme === 'dark' ? 'bg-dark-counter' : 'bg-light-counter',
       )}
     >

@@ -9,8 +9,12 @@
     "nav": "About Me",
     "title": "About Me",
     "description": "This is about me page.",
-    "c1": "Years of experience",
-    "c2": "Commercial projects"
+    "c11": "Years of experience",
+    "c12": "Commercial projects",
+    "c13": "Conducted technical lectures",
+    "t2": "Technologies",
+    "t3": "Resume",
+    "b31": "Download CV"
   },
   "contact": {
     "nav": "Contact",

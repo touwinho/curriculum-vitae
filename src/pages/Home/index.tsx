@@ -7,7 +7,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import Section from '@/components/Section'
 import SectionWrapper from '@/components/SectionWrapper'
-import { logos } from '@/assets/images/logos'
+import { logos } from '@/assets/images/companies'
 import homePageImage from '@/assets/images/photos/homePage.png'
 
 const Home: FC = () => {
@@ -29,10 +29,7 @@ const Home: FC = () => {
           )}
         />
       </Section>
-      <Section>
-        <h1 className={clsx('text-3xl text-center mb-2', 'md:mb-6')}>
-          {t('home.t2')}
-        </h1>
+      <Section title={t('home.t2')}>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
