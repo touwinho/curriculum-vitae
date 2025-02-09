@@ -38,7 +38,7 @@ const About: FC = () => {
               count >= projectsBreakpoint ? '10+' : count.toString()
             }
           />
-          <Counter title={t('about.c13')} targetCount={1} duration={250 * 5} />
+          <Counter title={t('about.c13')} targetCount={4} duration={250 * 5} />
         </div>
       </Section>
       <Section title={t('about.t2')}>

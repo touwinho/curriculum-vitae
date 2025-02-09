@@ -5,13 +5,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 //@ts-ignore
 import 'swiper/css'
+import { useTheme } from '@/context/ThemeContext'
 import Section from '@/components/Section'
 import SectionWrapper from '@/components/SectionWrapper'
-import { logos } from '@/assets/images/companies'
+import { companies } from '@/assets/images/companies'
 import homePageImage from '@/assets/images/photos/homePage.png'
 
 const Home: FC = () => {
   const { t } = useTranslation()
+  const { theme } = useTheme()
 
   return (
     <SectionWrapper>
@@ -56,8 +58,14 @@ const Home: FC = () => {
             disableOnInteraction: false,
           }}
         >
-          {logos.map(({ name, alt, link }) => (
-            <SwiperSlide key={name} className="self-center select-none">
+          {companies.map(({ name, alt, link }) => (
+            <SwiperSlide
+              key={name}
+              className={clsx(
+                'self-center select-none opacity-70',
+                theme === 'dark' ? 'invert' : 'none',
+              )}
+            >
               <a href={link} target="_blank" rel="noreferrer">
                 <img src={name} alt={alt} />
               </a>

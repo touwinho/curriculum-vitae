@@ -3,7 +3,7 @@ import auctaneLogo from '@/assets/images/companies/auctane.svg'
 import codestorybroLogo from '@/assets/images/companies/codestorybro.svg'
 import trustmateLogo from '@/assets/images/companies/trustmate.svg'
 
-export const logos = [
+export const companies = [
   {
     name: codestorybroLogo,
     alt: 'CodeStoryBro',
