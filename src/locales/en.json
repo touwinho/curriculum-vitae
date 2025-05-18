@@ -1,7 +1,7 @@
 {
   "home": {
     "nav": "Home",
-    "t1": "Hi, I'm",
+    "t1": "Hi, I'm {{name}}",
     "p11": "Frontend Developer (React) with QA Automation (Playwright) experience. I combine creativity and attention to detail to build modern, reliable, and high-quality applications.",
     "t2": "Who have I collaborated with?"
   },

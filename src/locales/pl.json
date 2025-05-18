@@ -1,7 +1,7 @@
 {
   "home": {
     "nav": "Strona główna",
-    "t1": "Cześć, jestem",
+    "t1": "Cześć, jestem {{name}}",
     "p11": "Frontend Developer (React) z doświadczeniem QA Automation (Playwright). Łączę kreatywność i dbałość o szczegóły, tworząc nowoczesne, niezawodne aplikacje o najwyższej jakości.",
     "t2": "Z kim współpracowałem?"
   },

@@ -24,7 +24,7 @@ const Header: FC = () => {
         <nav className={clsx('hidden text-xl mr-6', 'md:flex')}>
           <NavButton title={t('home.nav')} path="/" />
           <NavButton title={t('about.nav')} path="/about" />
-          <NavButton title={t('contact.nav')} path="/contact" />
+          {/* <NavButton title={t('contact.nav')} path="/contact" /> */}
         </nav>
         <div className="flex items-center">
           <LanguageSwitch />

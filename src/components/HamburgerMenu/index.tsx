@@ -24,11 +24,11 @@ const HamburgerMenu: FC<Props> = ({ isOpen, closeMenu }) => {
       <nav className="flex flex-col items-center justify-center h-full text-4xl gap-16">
         <NavButton title={t('home.nav')} path="/" onClick={closeMenu} />
         <NavButton title={t('about.nav')} path="/about" onClick={closeMenu} />
-        <NavButton
+        {/* <NavButton
           title={t('contact.nav')}
           path="/contact"
           onClick={closeMenu}
-        />
+        /> */}
       </nav>
     </div>
   )

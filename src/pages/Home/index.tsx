@@ -12,12 +12,13 @@ import homePageImage from '@/assets/images/photos/homePage.png'
 
 const Home: FC = () => {
   const { t } = useTranslation()
+  const name = 'Łukasz'
 
   return (
     <SectionWrapper>
       <Section className="flex md:flex-row flex-col relative justify-between min-h-80">
         <div className={clsx('flex flex-col w-full', 'md:w-[60%]')}>
-          <h1 className="text-3xl mb-4">{t('home.t1')}&nbsp;Łukasz&nbsp;👋</h1>
+          <h1 className="text-3xl mb-4">{t('home.t1', { name: name })}👋</h1>
           <p className={clsx('text-lg', 'md:max-w-64')}>{t('home.p11')}</p>
         </div>
         <img
