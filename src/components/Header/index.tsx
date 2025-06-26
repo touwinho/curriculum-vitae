@@ -25,6 +25,7 @@ const Header: FC = () => {
           <NavButton title={t('home.nav')} path="/" />
           <NavButton title={t('about.nav')} path="/about" />
           {/* <NavButton title={t('contact.nav')} path="/contact" /> */}
+          {/* Uncomment if you have finished contact page */}
         </nav>
         <div className="flex items-center">
           <LanguageSwitch />
